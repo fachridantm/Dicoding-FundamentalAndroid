@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyIntentApp">
         <activity
+            android:name=".MoveForResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoveWithObjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoveWithDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoveActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
