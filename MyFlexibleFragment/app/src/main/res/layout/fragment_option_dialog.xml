@@ -57,7 +57,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp"
             android:layout_weight="0.5"
             android:text="@string/close" />
 
@@ -67,7 +66,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
             android:layout_weight="0.5"
             android:text="@string/choose" />
     </LinearLayout>
