@@ -28,15 +28,16 @@
         <item>Prof. Mr. Dr. Soepomo (Ejaan Soewandi: Supomo; lahir di Sukoharjo, Jawa Tengah, 22 Januari 1903 – meninggal di Jakarta, 12 September 1958 pada umur 55 tahun) adalah seorang pahlawan nasional Indonesia. Soepomo dikenal sebagai arsitek Undang-undang Dasar 1945, bersama dengan Muhammad Yamin dan Soekarno.</item>
     </string-array>
 
-    <integer-array name="data_photo">
-        <item>@drawable/ahmad_dahlan</item>
-        <item>@drawable/ahmad_yani</item>
-        <item>@drawable/bung_tomo</item>
-        <item>@drawable/gatot_subroto</item>
-        <item>@drawable/ki_hadjar_dewantara</item>
-        <item>@drawable/mohammad_hatta</item>
-        <item>@drawable/sudirman</item>
-        <item>@drawable/sukarno</item>
-        <item>@drawable/supomo</item>
-    </integer-array>
+    <string-array name="data_photo">
+        <item>https://upload.wikimedia.org/wikipedia/commons/8/87/Ahmad_Dahlan.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/3/3f/Ahmad_Yani.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/e/ed/Bung_Tomo.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/b/be/Col_Gatot_Subroto%2C_Kenang-Kenangan_Pada_Panglima_Besar_Letnan_Djenderal_Soedirman%2C_p27.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/3/3a/Ki_Hadjar_Dewantara_Mimbar_Umum_18_October_1949_p2.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/VP_Hatta.jpg/330px-VP_Hatta.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Sudirman.jpg/486px-Sudirman.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Presiden_Sukarno.jpg/330px-Presiden_Sukarno.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/c/c3/Supomo_from_President_Website.JPG</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/TanMalaka_DariPendjara_ed3.jpg/330px-TanMalaka_DariPendjara_ed3.jpg</item>
+    </string-array>
 </resources>
