@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GithubUserApp</string>
+    <string name="app_name">Github User App</string>
     <string name="avatars_sample">Sample Avatars</string>
     <string name="github_name">Name Github User</string>
     <string name="github_username">Username Github User</string>
@@ -113,4 +113,5 @@
         <item>@drawable/user9</item>
         <item>@drawable/user10</item>
     </integer-array>
+    <string name="github_logo">Github Logo</string>
 </resources>

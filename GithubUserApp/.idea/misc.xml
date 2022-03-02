@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Informatics/Android/AndroidStudioProjects/Dicoding-FundamentalAndroid/GithubUserApp/app/src/main/res/layout/activity_detail.xml" value="0.17" />
+        <entry key="..\:/Informatics/Android/AndroidStudioProjects/Dicoding-FundamentalAndroid/GithubUserApp/app/src/main/res/layout/activity_detail.xml" value="0.12" />
+        <entry key="..\:/Informatics/Android/AndroidStudioProjects/Dicoding-FundamentalAndroid/GithubUserApp/app/src/main/res/layout/activity_fullscreen.xml" value="0.129296875" />
         <entry key="..\:/Informatics/Android/AndroidStudioProjects/Dicoding-FundamentalAndroid/GithubUserApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Informatics/Android/AndroidStudioProjects/Dicoding-FundamentalAndroid/GithubUserApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.13984375" />
         <entry key="..\:/Informatics/Android/AndroidStudioProjects/Dicoding-FundamentalAndroid/GithubUserApp/app/src/main/res/layout/item_row_user.xml" value="0.25" />
+        <entry key="..\:/Informatics/Android/AndroidStudioProjects/Dicoding-FundamentalAndroid/GithubUserApp/app/src/main/res/mipmap-anydpi-v26/ic_github.xml" value="0.1" />
       </map>
     </option>
   </component>
