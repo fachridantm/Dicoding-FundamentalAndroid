@@ -4,59 +4,57 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.dicoding.fundamental.githubuserapp.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
 
-    private var title: String = "Detail User"
+    private var newTitle: String = "Detail User"
     private lateinit var binding: ActivityDetailBinding
 
     companion object {
-        const val EXTRA_NAME = "extra_name"
-        const val EXTRA_USERNAME = "extra_username"
-        const val EXTRA_AVATAR = "extra_avatar"
-        const val EXTRA_FOLLOWING = "extra_following"
-        const val EXTRA_FOLLOWERS = "extra_followers"
-        const val EXTRA_COMPANY = "extra_company"
-        const val EXTRA_LOCATION = "extra_location"
-        const val EXTRA_REPOSITORY = "extra_repository"
+        const val EXTRA_USER = "extra_user"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = title
+        supportActionBar?.apply {
+            title = newTitle
+            setDisplayHomeAsUpEnabled(true)
+        }
 
-        val name = intent.getStringExtra(EXTRA_NAME)
-        val username = intent.getStringExtra(EXTRA_USERNAME)
-        val avatar = intent.getIntExtra(EXTRA_AVATAR, 0)
-        val followers = intent.getStringExtra(EXTRA_FOLLOWERS)
-        val following = intent.getStringExtra(EXTRA_FOLLOWING)
-        val repository = intent.getStringExtra(EXTRA_REPOSITORY)
-        val company = intent.getStringExtra(EXTRA_COMPANY)
-        val location = intent.getStringExtra(EXTRA_LOCATION)
+        val user = intent.getParcelableExtra<GithubUser>(EXTRA_USER) as GithubUser
 
-        binding.tvItemNameDetail.text = name
-        binding.tvItemUsernameDetail.text = username
-        binding.tvFollowers.text = followers
-        binding.tvFollowing.text = following
-        binding.tvRepository.text = repository
-        binding.tvItemCompanyDetail.text = company
-        binding.tvItemLocationDetail.text = location
+        binding.apply {
+            tvItemUsernameDetail.text = user.username
+            tvItemNameDetail.text = user.name
+            tvItemLocationDetail.text = user.location
+            tvRepository.text = user.repository
+            tvItemCompanyDetail.text = user.company
+            tvFollowers.text = user.followers
+            tvFollowing.text = user.following
+        }
 
         Glide.with(this)
-            .load(avatar)
-            .circleCrop()
+            .load(user.avatar)
+            .apply(RequestOptions.circleCropTransform())
             .into(binding.imgItemAvatarDetail)
+
 
         binding.btnShare.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
+            val shareUser = "Follow ${user.name} on github! \nhttps://github.com/${user.username}"
             intent.type = "text/plain"
-            intent.putExtra(Intent.EXTRA_TEXT, "Follow $name on github! \nhttps://github.com/$username")
+            intent.putExtra(Intent.EXTRA_TEXT, shareUser)
             startActivity(Intent.createChooser(intent, "Share with..."))
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }

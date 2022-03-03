@@ -1,8 +1,8 @@
 package com.dicoding.fundamental.githubuserapp
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.fundamental.githubuserapp.databinding.ActivityMainBinding
 
@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -22,11 +21,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.rvUsers.setHasFixedSize(true)
 
-        list.addAll(listUsers)
+        list.apply {
+            clear()
+            list.addAll(listData)
+        }
         showRecyclerList()
     }
 
-    private val listUsers: ArrayList<GithubUser>
+    private val listData: ArrayList<GithubUser>
         @SuppressLint("Recycle")
         get() {
             val dataName = resources.getStringArray(R.array.name)
@@ -35,20 +37,20 @@ class MainActivity : AppCompatActivity() {
             val dataFollowers = resources.getStringArray(R.array.followers)
             val dataFollowing = resources.getStringArray(R.array.following)
             val dataRepository = resources.getStringArray(R.array.repository)
-            val dataCompany= resources.getStringArray(R.array.company)
+            val dataCompany = resources.getStringArray(R.array.company)
             val dataLocation = resources.getStringArray(R.array.location)
 
             val listUser = ArrayList<GithubUser>()
             for (i in dataName.indices) {
                 val user = GithubUser(
-                    dataName[i],
                     dataUsername[i],
-                    dataAvatar.getResourceId(i, -1),
-                    dataFollowers[i],
-                    dataFollowing[i],
+                    dataName[i],
+                    dataLocation[i],
                     dataRepository[i],
                     dataCompany[i],
-                    dataLocation[i]
+                    dataFollowers[i],
+                    dataFollowing[i],
+                    dataAvatar.getResourceId(i, -1)
                 )
                 listUser.add(user)
             }
