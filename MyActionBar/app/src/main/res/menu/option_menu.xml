@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:menuCategory="container">
+        <item android:id="@+id/menu1"
+            android:title="@string/menu_1"
+            android:icon = "@drawable/ic_announcement_white_24"
+            app:showAsAction="always" />
+        <item android:id="@+id/menu2"
+            android:title="@string/menu_2" />
+    </group>
+</menu>
