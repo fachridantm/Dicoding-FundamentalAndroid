@@ -17,5 +17,8 @@
     <string name="menu_hotel">Hotel</string>
     <string name="menu_subway">Subway</string>
 
-    <string name="btn_fab">FAB</string>
+    <string name="btn_fab">Floating Action Button</string>
+    <string name="action_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
