@@ -1,11 +1,12 @@
 package com.dicoding.fundamental.myflexiblefragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 
 class CategoryFragment : Fragment(), View.OnClickListener {
     override fun onCreateView(
@@ -22,9 +23,41 @@ class CategoryFragment : Fragment(), View.OnClickListener {
         btnDetailCategory.setOnClickListener(this)
     }
 
+    /*
+    without Android KTX
+     */
+//    override fun onClick(v: View) {
+//        if (v.id == R.id.btn_detail_category) {
+//
+//            val mDetailCategoryFragment = DetailCategoryFragment()
+//            val mBundle = Bundle()
+//
+//            mBundle.putString(DetailCategoryFragment.EXTRA_NAME, "Lifestyle")
+//
+//            val description = "Kategori ini akan berisi produk-produk lifestyle"
+//
+//            mDetailCategoryFragment.arguments = mBundle
+//            mDetailCategoryFragment.description = description
+//
+//            val mFragmentManager = parentFragmentManager
+//            mFragmentManager.beginTransaction().apply {
+//                replace(
+//                    R.id.frame_container,
+//                    mDetailCategoryFragment,
+//                    DetailCategoryFragment::class.java.simpleName
+//                )
+//                addToBackStack(null)
+//                commit()
+//
+//            }
+//        }
+//    }
+
+    /*
+    with Android KTX
+     */
     override fun onClick(v: View) {
         if (v.id == R.id.btn_detail_category) {
-
             val mDetailCategoryFragment = DetailCategoryFragment()
             val mBundle = Bundle()
 
@@ -34,17 +67,10 @@ class CategoryFragment : Fragment(), View.OnClickListener {
 
             mDetailCategoryFragment.arguments = mBundle
             mDetailCategoryFragment.description = description
-
             val mFragmentManager = parentFragmentManager
-            mFragmentManager.beginTransaction().apply {
-                replace(
-                    R.id.frame_container,
-                    mDetailCategoryFragment,
-                    DetailCategoryFragment::class.java.simpleName
-                )
+            mFragmentManager.commit {
                 addToBackStack(null)
-                commit()
-
+                replace(R.id.frame_container, mDetailCategoryFragment, DetailCategoryFragment::class.java.simpleName)
             }
         }
     }
