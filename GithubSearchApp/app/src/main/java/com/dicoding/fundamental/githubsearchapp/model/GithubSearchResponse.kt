@@ -43,6 +43,9 @@ data class GithubUser(
     @field:SerializedName("name")
     val name: String?,
 
+    @field:SerializedName("message")
+    val message: String,
+
     @field:SerializedName("location")
     val location: String?
 )
