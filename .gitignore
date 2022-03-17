@@ -11,6 +11,9 @@ ehthumbs_vista.db
 # Dump file
 *.stackdump
 
+# Android
+.gradle
+
 # Folder config file
 [Dd]esktop.ini
 
