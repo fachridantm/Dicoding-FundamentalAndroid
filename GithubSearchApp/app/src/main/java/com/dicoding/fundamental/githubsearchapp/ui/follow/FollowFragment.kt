@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.dicoding.fundamental.githubsearchapp.adapter.ViewPagerAdapter
 import com.dicoding.fundamental.githubsearchapp.databinding.FragmentFollowBinding
 import com.dicoding.fundamental.githubsearchapp.ui.detail.DetailViewModel
@@ -14,15 +15,14 @@ import com.dicoding.fundamental.githubsearchapp.ui.detail.DetailViewModel
 class FollowFragment : Fragment() {
 
     private var position = 0
-    private lateinit var bindingFragment: FragmentFollowBinding
+    private val bindingFragment: FragmentFollowBinding by viewBinding()
     private val detailViewModel by activityViewModels<DetailViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        bindingFragment = FragmentFollowBinding.inflate(inflater, container, false)
-        return bindingFragment.root
+        return FragmentFollowBinding.inflate(inflater, container, false).root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

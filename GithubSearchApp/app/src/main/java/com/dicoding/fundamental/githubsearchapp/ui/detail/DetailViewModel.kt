@@ -35,9 +35,8 @@ class DetailViewModel : ViewModel() {
                 response: Response<GithubUser>
             ) {
                 _isLoading.value = false
-                val result = response.body()
                 if (response.isSuccessful) {
-                    _userData.postValue(result)
+                    _userData.postValue(response.body())
                 } else {
                     _toastText.value = Event("User not found")
                     _toastText.value = Event(response.toString())
@@ -63,9 +62,8 @@ class DetailViewModel : ViewModel() {
                 response: Response<ArrayList<FollowResponseItem>>
             ) {
                 _isLoading.value = false
-                val result = response.body()
                 if (response.isSuccessful) {
-                    _listGithubUser.value = result
+                    _listGithubUser.value = response.body()
                 } else {
                     _toastText.value = Event(response.toString())
                     Log.e(TAG, "onFailure: ${response.message()}")
@@ -89,9 +87,8 @@ class DetailViewModel : ViewModel() {
                 response: Response<ArrayList<FollowResponseItem>>
             ) {
                 _isLoading.value = false
-                val result = response.body()
                 if (response.isSuccessful) {
-                    _listGithubUser.value = result
+                    _listGithubUser.value = response.body()
                 } else {
                     _toastText.value = Event(response.toString())
                     Log.e(TAG, "onFailure: ${response.message()}")

@@ -75,7 +75,11 @@ class DetailActivity : AppCompatActivity() {
 
                 Glide.with(this@DetailActivity)
                     .load(userData.avatar)
-                    .apply(RequestOptions.circleCropTransform())
+                    .apply(RequestOptions
+                        .circleCropTransform()
+                        .placeholder(R.drawable.logo_github_light)
+                        .error(R.drawable.logo_github_light)
+                    )
                     .into(ivAvatar)
 
                 val fragment = mutableListOf<Fragment>(

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.dicoding.fundamental.githubsearchapp.R
 import com.dicoding.fundamental.githubsearchapp.databinding.ItemRowUserBinding
 import com.dicoding.fundamental.githubsearchapp.model.GithubUser
 import com.dicoding.fundamental.githubsearchapp.ui.detail.DetailActivity
@@ -22,8 +23,11 @@ class ListUserAdapter(private val listUser: List<GithubUser>) :
                 tvItemUsername.text = user.username
                 Glide.with(itemView.context)
                     .load(user.avatar)
-                    .apply(RequestOptions.circleCropTransform())
-                    .into(ivItemAvatar)
+                    .apply(RequestOptions
+                        .circleCropTransform()
+                        .placeholder(R.drawable.logo_github_light)
+                        .error(R.drawable.logo_github_light)
+                    ).into(ivItemAvatar)
             }
 
             itemView.setOnClickListener {

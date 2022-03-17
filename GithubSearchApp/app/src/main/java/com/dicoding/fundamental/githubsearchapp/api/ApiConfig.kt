@@ -1,6 +1,6 @@
 package com.dicoding.fundamental.githubsearchapp.api
 
-import androidx.viewbinding.BuildConfig
+import com.dicoding.fundamental.githubsearchapp.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -18,7 +18,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://api.github.com/")
+                .baseUrl(BuildConfig.API_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
