@@ -66,7 +66,6 @@
 
         <Button
             android:id="@+id/btn_calculate_volume"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -75,7 +74,6 @@
 
         <Button
             android:id="@+id/btn_calculate_circumference"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -86,7 +84,6 @@
 
         <Button
             android:id="@+id/btn_calculate_surface_area"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
