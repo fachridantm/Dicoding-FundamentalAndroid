@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:labelFor="@+id/edt_name"
         android:text="@string/name" />
 
     <TextView
@@ -27,6 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:labelFor="@+id/edt_email"
         android:text="@string/email" />
 
     <TextView
@@ -42,6 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:labelFor="@+id/edt_phone"
         android:text="@string/phone_number" />
 
     <TextView
@@ -57,6 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:labelFor="@+id/edt_age"
         android:text="@string/age" />
 
     <TextView
