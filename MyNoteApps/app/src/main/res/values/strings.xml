@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MyNoteApps</string>
+    <string name="title">Judul</string>
+    <string name="description">Deskripsi</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Hapus</string>
+    <string name="date">Date</string>
+    <string name="fab">FAB</string>
 </resources>
