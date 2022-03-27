@@ -17,7 +17,7 @@ object ApiConfig {
             .addInterceptor(loggingInterceptor)
             .addInterceptor { chain ->
                 chain.request().newBuilder()
-                    .addHeader("Authorization", BuildConfig.TOKEN)
+                    .addHeader("Authorization","token ${BuildConfig.TOKEN}")
                     .build()
                     .let(chain::proceed)
             }

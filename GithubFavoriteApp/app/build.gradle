@@ -9,7 +9,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        buildConfigField("String", "TOKEN", '"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"')
+        buildConfigField("String", "TOKEN", '""')
         buildConfigField("String", "API_URL", '"https://api.github.com/"')
 
         applicationId "com.dicoding.fundamental.githubfavoriteapp"
