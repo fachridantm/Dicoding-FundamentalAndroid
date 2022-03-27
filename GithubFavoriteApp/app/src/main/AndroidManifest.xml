@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dicoding.fundamental.githubsearchapp">
+    package="com.dicoding.fundamental.githubfavoriteapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,7 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_github_light_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GithubSearchApp">
+        android:theme="@style/Theme.GithubFovoriteApp">
+        <activity
+            android:name=".ui.favorite.FavoriteUserActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.SplashScreenActivity"
             android:exported="true">
@@ -20,14 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.detail.DetailActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".ui.main.MainActivity"
             android:configChanges="orientation|screenSize"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleTask" />
     </application>
 
 </manifest>

@@ -2,8 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/shareButton"
-        android:icon="@drawable/ic_baseline_share_24"
-        android:title="@string/share"
+        android:id="@+id/favButton"
+        android:icon="@drawable/ic_favorite"
+        android:title="@string/favorite"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/modeButton"
+        android:icon="@drawable/ic_light_mode"
+        android:title="@string/settings"
         app:showAsAction="ifRoom" />
 </menu>

@@ -6,10 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginBottom="4dp">
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -29,11 +27,11 @@
             android:id="@+id/tv_item_username"
             style="@style/TextStyle.TITLE"
             android:layout_width="0dp"
-            android:layout_marginStart="16dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
             app:layout_constraintBottom_toBottomOf="@id/iv_item_avatar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_item_avatar"
+            app:layout_constraintStart_toEndOf="@id/iv_item_avatar"
             app:layout_constraintTop_toTopOf="@id/iv_item_avatar"
             tools:text="@string/github_username" />
 

@@ -62,7 +62,7 @@
         tools:visibility="invisible" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBarMain"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,4 +73,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">Github User\'s Search</string>
+    <string name="app_name">Github Favorite Users</string>
     <string name="avatar_sample">Sample Avatar</string>
     <string name="github_name">Github Name</string>
     <string name="github_username">Github Username</string>
     <string name="location">Location</string>
     <string name="search_hint">Search User</string>
     <string name="find_doodle">Let\'s find someone here!</string>
+    <string name="favorite_doodle">Let\'s favorite someone here!</string>
     <string name="avatars_sample">Sample Avatar</string>
     <string name="followers">Followers</string>
     <string name="following">Following</string>
@@ -16,4 +17,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="github_logo">Github Logo</string>
     <string name="share">Share</string>
+    <string name="favorite">Favorite</string>
+    <string name="settings">Settings</string>
+    <string name="title_favorite">Favorite User</string>
 </resources>

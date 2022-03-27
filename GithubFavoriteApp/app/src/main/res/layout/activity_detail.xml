@@ -18,6 +18,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/favButton"
+        android:backgroundTint="@color/black_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/favorite"
+        android:src="@drawable/ic_favorite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.750"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
     <TextView
         android:id="@+id/tv_name"
         style="@style/TextStyle.TITLE"
@@ -78,7 +90,6 @@
         app:layout_constraintTop_toTopOf="@id/tv_following"
         tools:text="Repository" />
 
-
     <TextView
         android:id="@+id/tv_followers_label"
         style="@style/TextStyle.LABEL"
@@ -119,7 +130,7 @@
         android:layout_marginTop="16dp"
         android:drawablePadding="8dp"
         android:gravity="center"
-        app:drawableLeftCompat="@drawable/ic_baseline_location_24"
+        app:drawableLeftCompat="@drawable/ic_location"
         app:layout_constraintBottom_toTopOf="@id/tv_company"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,14 +146,14 @@
         android:layout_marginTop="8dp"
         android:drawablePadding="8dp"
         android:gravity="center"
-        app:drawableLeftCompat="@drawable/ic_baseline_apartment_24"
+        app:drawableLeftCompat="@drawable/ic_apartment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_location"
         tools:text="@string/company" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBarDetail"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -160,7 +171,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         app:layout_constraintBottom_toTopOf="@id/view_pager"
-        app:layout_constraintTop_toBottomOf="@id/tv_company" />
+        app:layout_constraintTop_toBottomOf="@id/tv_company"
+        app:tabIndicatorColor="@color/green"
+        app:tabSelectedTextColor="@color/green" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
