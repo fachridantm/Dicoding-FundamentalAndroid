@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun themeDialog() {
-        val modes = arrayOf("Night Mode", "Light Mode")
+        val modes = arrayOf("Dark Mode", "Light Mode")
 
         val builder = Builder(this)
         builder.setTitle("Select Theme Mode")
