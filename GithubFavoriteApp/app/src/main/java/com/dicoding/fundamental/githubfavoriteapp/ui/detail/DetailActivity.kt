@@ -160,7 +160,7 @@ class DetailActivity : AppCompatActivity() {
 
                 if (isFavorited) {
                     Toast.makeText(
-                        this, "Remove $username to favorite", Toast.LENGTH_SHORT
+                        this, "Remove $username from favorite", Toast.LENGTH_SHORT
                     ).show()
                     setIconFavorite(isFavorited)
                 } else {

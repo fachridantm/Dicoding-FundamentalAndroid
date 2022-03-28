@@ -6,7 +6,7 @@
     <string name="location">Location</string>
     <string name="search_hint">Search User</string>
     <string name="find_doodle">Let\'s find someone here!</string>
-    <string name="favorite_doodle">Let\'s favorite someone here!</string>
+    <string name="fav_doodle">Let\'s favorite someone here!</string>
     <string name="avatars_sample">Sample Avatar</string>
     <string name="followers">Followers</string>
     <string name="following">Following</string>

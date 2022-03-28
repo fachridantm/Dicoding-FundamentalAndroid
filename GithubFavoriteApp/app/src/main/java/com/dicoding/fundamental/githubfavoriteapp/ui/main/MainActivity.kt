@@ -17,6 +17,7 @@ import com.dicoding.fundamental.githubfavoriteapp.databinding.ActivityMainBindin
 import com.dicoding.fundamental.githubfavoriteapp.helper.ViewModelFactory
 import com.dicoding.fundamental.githubfavoriteapp.ui.favorite.FavoriteUserActivity
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mainBinding: ActivityMainBinding
@@ -115,13 +116,19 @@ class MainActivity : AppCompatActivity() {
         builder.setTitle("Select Theme Mode")
         builder.setItems(modes) { _, which ->
             mainViewModel.saveThemeSetting(which == 0)
-            Toast.makeText(this, "Apply " + modes[which], Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Apply your theme to ${modes[which]}", Toast.LENGTH_SHORT).show()
         }
         builder.show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
+
+        val modeButton = menu.findItem(R.id.modeButton)
+        mainViewModel.getThemeSetting().observe(this) { isNightMode ->
+            if (isNightMode) modeButton.setIcon(R.drawable.ic_light_mode) else modeButton.setIcon(R.drawable.ic_night_mode)
+        }
+
         return super.onCreateOptionsMenu(menu)
     }
 

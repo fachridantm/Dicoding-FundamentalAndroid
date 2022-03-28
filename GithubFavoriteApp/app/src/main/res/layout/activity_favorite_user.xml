@@ -15,6 +15,33 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_row_user" />
 
+    <ImageView
+        android:id="@+id/iv_doodle_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/find_doodle"
+        android:src="@drawable/doodle_find"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_doodle_fav"
+        style="@style/TextStyle.TITLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:text="@string/fav_doodle"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_doodle_fav"
+        tools:visibility="invisible" />
+
     <ProgressBar
         android:id="@+id/progressBarFav"
         style="?android:attr/progressBarStyle"

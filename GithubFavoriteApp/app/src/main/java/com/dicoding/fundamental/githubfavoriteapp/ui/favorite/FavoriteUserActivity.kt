@@ -31,9 +31,16 @@ class FavoriteUserActivity : AppCompatActivity() {
 
         favoriteAdapter = FavoriteAdapter()
         showRecyclerList()
-        favoriteViewModel.getFavoritedUser().observe(this) { favoriteUser ->
+        favoriteViewModel.getFavoritedUser().observe(this) { favList ->
             favoriteUserBinding.progressBarFav.visibility = View.GONE
-            favoriteAdapter.updateUserList(favoriteUser)
+            favoriteAdapter.updateUserList(favList)
+
+            val isListEmpty = favList.isEmpty()
+            if (isListEmpty) {
+                showImage(isListEmpty)
+            } else {
+                showImage(isListEmpty)
+            }
         }
     }
 
@@ -43,6 +50,13 @@ class FavoriteUserActivity : AppCompatActivity() {
             setHasFixedSize(true)
             adapter = favoriteAdapter
         }
+    }
+
+    private fun showImage(isImageVisible: Boolean) {
+        favoriteUserBinding.ivDoodleFav.visibility =
+            if (isImageVisible) View.VISIBLE else View.INVISIBLE
+        favoriteUserBinding.tvDoodleFav.visibility =
+            if (isImageVisible) View.VISIBLE else View.INVISIBLE
     }
 
     override fun onSupportNavigateUp(): Boolean {
