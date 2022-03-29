@@ -16,7 +16,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class UserRepository(
+class UserRepository private constructor(
     private val preferences: SettingPreferences,
     private val apiService: ApiService,
     private val userDao: UserDao

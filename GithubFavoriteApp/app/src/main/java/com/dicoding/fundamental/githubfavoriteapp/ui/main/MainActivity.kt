@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        mainBinding.progressBarMain.visibility = if (isLoading) View.VISIBLE else View.GONE
+        mainBinding.pbMain.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     private fun showImage(isImageVisible: Boolean) {

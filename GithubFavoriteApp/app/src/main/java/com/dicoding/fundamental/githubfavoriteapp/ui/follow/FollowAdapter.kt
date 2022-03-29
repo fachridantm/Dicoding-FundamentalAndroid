@@ -11,8 +11,8 @@ import com.dicoding.fundamental.githubfavoriteapp.databinding.ItemRowUserBinding
 import com.dicoding.fundamental.githubfavoriteapp.data.model.response.FollowResponseItem
 import com.dicoding.fundamental.githubfavoriteapp.ui.detail.DetailActivity
 
-class ViewPagerAdapter(private val listUser: ArrayList<FollowResponseItem>) :
-    RecyclerView.Adapter<ViewPagerAdapter.ViewPagerHolder>() {
+class FollowAdapter(private val listUser: ArrayList<FollowResponseItem>) :
+    RecyclerView.Adapter<FollowAdapter.ViewPagerHolder>() {
 
     inner class ViewPagerHolder(private val userBinding: ItemRowUserBinding) :
         RecyclerView.ViewHolder(userBinding.root) {

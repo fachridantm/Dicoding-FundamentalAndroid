@@ -27,9 +27,9 @@ class FollowFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        detailViewModel.listGithubUser.observe(this) { listGithubUser ->
+        detailViewModel.listGithubUser.observe(viewLifecycleOwner) { listGithubUser ->
             bindingFragment.rvFollow.apply {
-                adapter = ViewPagerAdapter(listGithubUser)
+                adapter = FollowAdapter(listGithubUser)
                 setHasFixedSize(true)
                 layoutManager = LinearLayoutManager(requireActivity())
             }

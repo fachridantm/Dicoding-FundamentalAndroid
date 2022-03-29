@@ -12,7 +12,7 @@
         tools:listitem="@layout/item_row_user" />
 
     <ProgressBar
-        android:id="@+id/progresBarFollow"
+        android:id="@+id/pb_follow"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

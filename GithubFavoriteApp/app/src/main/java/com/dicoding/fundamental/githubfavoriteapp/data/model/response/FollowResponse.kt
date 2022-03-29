@@ -18,10 +18,4 @@ data class FollowResponseItem(
 
     @field:SerializedName("html_url")
     val url: String,
-
-    @field:SerializedName("message")
-    val message: String,
-
-    @field:SerializedName("id")
-    val id: Int
 )

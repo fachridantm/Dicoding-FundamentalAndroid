@@ -145,7 +145,7 @@ class DetailActivity : AppCompatActivity() {
             }
             setIconFavorite(isFavorited)
 
-            detailBinding.favButton.setOnClickListener {
+            detailBinding.fabFav.setOnClickListener {
                 val entity = username?.let { UserEntity(it, avatar, false) }
 
                 try {
@@ -174,11 +174,11 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        detailBinding.progressBarDetail.visibility = if (isLoading) View.VISIBLE else View.GONE
+        detailBinding.pbDetail.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     private fun setIconFavorite(isFavorited: Boolean) {
-        detailBinding.favButton.apply {
+        detailBinding.fabFav.apply {
             if (isFavorited) {
                 setImageDrawable(
                     ContextCompat.getDrawable(

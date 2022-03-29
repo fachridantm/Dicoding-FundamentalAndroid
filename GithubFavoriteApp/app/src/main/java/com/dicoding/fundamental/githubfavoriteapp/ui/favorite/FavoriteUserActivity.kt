@@ -32,7 +32,7 @@ class FavoriteUserActivity : AppCompatActivity() {
         favoriteAdapter = FavoriteAdapter()
         showRecyclerList()
         favoriteViewModel.getFavoritedUser().observe(this) { favList ->
-            favoriteUserBinding.progressBarFav.visibility = View.GONE
+            favoriteUserBinding.pbFav.visibility = View.GONE
             favoriteAdapter.updateUserList(favList)
 
             val isListEmpty = favList.isEmpty()
@@ -45,7 +45,7 @@ class FavoriteUserActivity : AppCompatActivity() {
     }
 
     private fun showRecyclerList() {
-        favoriteUserBinding.rvFavorite.apply {
+        favoriteUserBinding.rvFav.apply {
             layoutManager = LinearLayoutManager(this@FavoriteUserActivity)
             setHasFixedSize(true)
             adapter = favoriteAdapter
