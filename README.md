@@ -4,5 +4,23 @@ Repository for Documentations [Dicoding - Belajar Fundamental Aplikasi Android](
 ## Purpose
 Record Project Belajar Fundamental Aplikasi Android from [Dicoding Indonesia](https://www.dicoding.com/)
 
+## Screenshots Final Submission
+![Github Favorite Apps](https://raw.githubusercontent.com/fachridantm/Dicoding-FundamentalAndroid/main/GithubFavoriteApp/app/screenshots/Github-Favorite-Apps.png)
+
+## Features
+#### Final Submission Checklists
+
+- [x] Applications can add users to the favorites list
+- [x] Applications can remove users from the favorites list
+- [x] A page that displays a list of user favorites
+- [x] There is a setting to change the theme.
+- [x] Preserves all application features and components used in Submission 2
+- [x] The application is not force closed
+- [x] Include button share with implicit intent
+- [x] Dark mode and Light mode
+
+## Installation
+Download and install beta version [soon]()
+
 ## Author
 * #### Fachridan Tio Mu'afa
