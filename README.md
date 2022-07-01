@@ -16,8 +16,10 @@ Record Project Belajar Fundamental Aplikasi Android from [Dicoding Indonesia](ht
 - [x] There is a setting to change the theme.
 - [x] Preserves all application features and components used in Submission 2
 - [x] The application is not force closed
+- [x] Using library Retrofit for networking
 - [x] Include button share with implicit intent
-- [x] Dark mode and Light mode
+- [x] Using Android Architecture Component (ViewModel and LiveData) correctly
+- [x] Using DataStore for saving preference
 
 ## Installation
 Download and install beta version [soon]()
